@@ -1,19 +1,12 @@
-FROM node:6-slim
-MAINTAINER Team STAR-LORD
+FROM node:10-alpine
+LABEL maintainer="Jason Greathouse <jgreat@jgreat.me>"
 
-ENV DEBIAN_FRONTEND noninteractive
-
-#install
-RUN apt-get update && \
-    apt-get install -y jq bash curl && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-#add repo
-ADD . /app
-
-#Change the working directory to the app root
+ADD ./package.json /app/package.json
 WORKDIR /app
+RUN npm install
+
+# add app
+ADD . /app
 
 #add entrypoint and start up scripts
 ADD .docker /usr/local/bin

@@ -1,0 +1,7 @@
+questions:
+- label: Automatic Update
+  description: Automatically update on pipeline chart update.
+  variable: rancher.autoUpdate
+  default: "false"
+  type: boolean
+  required: true

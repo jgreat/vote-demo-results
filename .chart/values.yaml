@@ -1,0 +1,25 @@
+# Default values for vote-demo-results.
+domainName: eng.rancher.space
+
+image:
+  repository: jgreat/vote-demo-results
+  # tag: latest
+  pullPolicy: IfNotPresent
+
+ingress:
+  annotations: {
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  }
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  tls: []
+
+replicaCount: 1
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

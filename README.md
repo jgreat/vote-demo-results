@@ -1,2 +1,3 @@
 # vote-demo-results
-Borrowed from DockerCon16 demo. https://github.com/docker/swarm-microservice-demo-v1
+
+Based on https://github.com/docker/swarm-microservice-demo-v1. Rewritten in node, rabbitmq for queue, postgres for server.
