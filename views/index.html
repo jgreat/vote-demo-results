@@ -3,11 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Charmander vs Squirtle -- Result</title>
-    <base href="/index.html">
+    <base href="/results/index.html">
     <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
-    <meta name="keywords" content="docker-compose, docker, stack">
-    <meta name="author" content="Tutum dev team, Modified by Jason Greathouse">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta name="author" content="Jason Greathouse - Inspired by a dockercon demo">
+    <link rel='stylesheet' href='/results/stylesheets/style.css' />
   </head>
   <body ng-controller="statsCtrl" >
      <div id="background-stats">
@@ -19,12 +18,12 @@
     <div id="content-container">
       <div id="content-container-center">
         <div id="choice">
-          <div class="choice cats">
+          <div class="choice b">
             <div class="label">Charmander</div>
             <div class="stat">{{aPercent | number:1}}%</div>
           </div>
           <div class="divider"></div>
-          <div class="choice dogs">
+          <div class="choice a">
             <div class="label">Squirtle</div>
             <div class="stat">{{bPercent | number:1}}%</div>
           </div>
@@ -42,8 +41,8 @@
     <div id="result" ng-if="total > 0">
       {{total}} votes
     </div>
-    <script src="socket.io.js"></script>
+    <script src="/results/socket.io.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    <script src="app.js"></script>
+    <script src="/results/app.js"></script>
   </body>
 </html>
