@@ -13,8 +13,8 @@ var config = {
     listenPort: envs('LISTEN_PORT', 8000),
   },
   app: {
-    optionA: envs('VOTE_OPTION_A', "Charmander"),
-    optionB: envs('VOTE_OPTION_B', "Squirtle")
+    optionA: envs('VOTE_OPTION_A', "Dumpster"),
+    optionB: envs('VOTE_OPTION_B', "Tire")
   },
   pg: {
     host: envs('POSTGRES_HOST', 'postgresql'),
