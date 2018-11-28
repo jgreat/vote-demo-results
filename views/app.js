@@ -1,4 +1,4 @@
-var app = angular.module('pokemon', []);
+var app = angular.module('vote', []);
 var socket = io.connect({transports:['polling']});
 
 var bg1 = document.getElementById('background-stats-1');
