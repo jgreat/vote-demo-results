@@ -12,7 +12,6 @@
     "async": "^2.6.1",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
-    "envs": "^0.1.6",
     "express": "^4.16.4",
     "method-override": "^3.0.0",
     "pg": "^7.6.1",
