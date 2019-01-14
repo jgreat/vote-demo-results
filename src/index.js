@@ -3,25 +3,24 @@ var async = require('async')
 var cookieParser = require('cookie-parser')
 var bodyParser = require('body-parser')
 var methodOverride = require('method-override')
-var envs = require('envs')
 var { Pool, Client } = require('pg')
 
-var debug = envs('DEBUG')
+var debug = process.env.DEBUG
 var config = {
   server: {
-    listenIp: envs('LISTEN_IP', '0.0.0.0'),
-    listenPort: envs('LISTEN_PORT', 8000),
+    listenIp: process.env.LISTEN_IP || '0.0.0.0',
+    listenPort: process.env.LISTEN_PORT || 8000
   },
   app: {
-    optionA: envs('VOTE_OPTION_A', "Dumpster"),
-    optionB: envs('VOTE_OPTION_B', "Tire")
+    optionA: process.env.VOTE_OPTION_A || 'Dumpster',
+    optionB: process.env.VOTE_OPTION_B || 'Tire'
   },
   pg: {
-    host: envs('POSTGRES_HOST', 'postgresql'),
-    user: envs('POSTGRES_USER', 'vote'),
-    password: envs('POSTGRES_PASSWORD', 'vote'),
-    database: envs('POSTGRES_DB', 'vote'),
-    port: envs('POSTGRES_DB_PORT', '5432')
+    host: process.env.POSTGRES_HOST || 'postgresql',
+    user: process.env.POSTGRES_USER || 'vote',
+    password: process.env.POSTGRES_PASSWORD || 'vote',
+    database: process.env.POSTGRES_DB || 'vote',
+    port: process.env.POSTGRES_DB_PORT || 5432
   },
 }
 
