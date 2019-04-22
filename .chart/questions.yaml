@@ -1,4 +1,10 @@
 questions:
+- label: Domain Name
+  description: Domain name for dns endpoint.
+  variable: domainName
+  default: "eng.rancher.space"
+  type: string
+  required: true
 - label: Automatic Update
   description: Automatically update on pipeline chart update.
   variable: rancher.autoUpdate

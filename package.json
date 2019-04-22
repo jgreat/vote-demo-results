@@ -1,6 +1,6 @@
 {
   "name": "vote-demo-result",
-  "version": "2.1.1",
+  "version": "2.1.4",
   "description": "",
   "main": "server.js",
   "scripts": {
